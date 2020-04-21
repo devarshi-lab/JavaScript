@@ -1,0 +1,73 @@
+<html>
+<title>Some basic concepts of javascript</title>
+<body>
+
+<script>				/*Old JavaScript examples may use a type attribute: <script type="text/javascript">. 
+					The type attribute is not required. JavaScript is the default scripting language in HTML.*/
+document.write("First Program");
+</script>
+<h1>Different output methods</h1>
+
+<! Note : we can use as many as script tag we want
+Scripts can be placed in the 'body' or in the 'head' section of an HTML page, or in both.
+
+Placing scripts at the bottom of the 'body' element improves the display speed, because script interpretation slows down the display.
+>
+
+
+<! There are some methods we can we use to print output
+   
+	SYNTAX :
+	1.document.getElementById().innerHTML=""; 
+	2.document.write();
+	3.console.log();
+	4.alert();
+>
+<p id=demo></p>	<!whatever we will print will come inside this p tag.>
+
+<script>
+document.getElementById('demo').innerHTML='Printing using getElementById().innerHTML="";<br>';
+document.write("Printing using document.write()<br>");
+console.log(100+12);	//it is use for debugging purpose.1.press F12 and click on console nd then run again
+//alert(1+1);		//this will pop window with result
+</script>
+
+<h1>Functions</h1>
+
+
+<script>
+function myfunction()
+{
+	document.getElementById('date').innerHTML= Date();
+}
+</script>
+
+<button type='button' onclick='myfunction()'>Click to check date</button>
+<p id=date></p>	
+</br>when we click on button then myfunction() function gets invokes
+
+<br>we can also write script code in another file and access it here like css
+
+
+<p id="change">It will change.</p>
+<button type="button" onclick="check()">Click me!</button>
+<script src="myjs.js">
+/*	External JavaScript Advantages
+Placing scripts in external files has some advantages:
+
+It separates HTML and code
+It makes HTML and JavaScript easier to read and maintain
+Cached JavaScript files can speed up page loads
+
+
+External scripts are practical when the same code is used in many different web pages.
+JavaScript files have the file extension .js.
+To use an external script, put the name of the script file in the src (source) attribute of a <script> tag:*/
+</script>	
+
+<! myjs.js is getting accessed here.It is in same folder where our page is.If your js file is somewhere else then u have to give full path>
+
+
+
+</body>
+</html>
