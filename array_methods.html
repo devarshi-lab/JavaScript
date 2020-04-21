@@ -10,8 +10,34 @@
 <html>
 	<title>Array Methods</title>
 	<head>
+	<body>
+
 	<script type="text/javascript">
-		var name=["kanhaiya","aniket","mayur","sagar"];
+		var arr=["kanhaiya","aniket","mayur","sagar"];
+		document.write(arr + "<br>");
+		arr.sort();	//this will sort array in alphabetical order
+		document.write("After sorting : <br> " + arr +"<br>");
 		
-		for(i=0;i<array.length;i++)
+
+		var length=arr.length;	//this will store length of array in length variable
+		document.write("Length of array  : " + length +"<br>"); 	
+		
+		arr.reverse();	//this will reverse the array
+		document.write("After reversing : <br> " + arr +"<br>");
+
+		arr.push("Chirag");	//this will push element present in array
+		document.write("After pushing : <br> " + arr +"<br>");
+
+
+		var poping=arr.pop();	//this will pop last element present in array
+		document.write("After poping : <br> " + poping +"<br>");
+		
+		arr.shift()	//this will remove the first item of array
+		document.write("After shift : <br> " + arr +"<br>");
+		
+		
+		
+		
+	</script>			
+	
 		
