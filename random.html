@@ -1,0 +1,32 @@
+<div>
+<html>
+    <title>Random Number generator</title>
+    <head><center><h1>Guess the number</h1></center></head>
+    <body>
+        <div>
+            <center><label>Please enter ur number : </label></center>
+            <center><input type=text id=demo value =""></center>
+        </div>
+        <div>
+            <center><button onclick=generate()>Click me!</button></center>
+        </div>
+        <script>
+            function generate ()
+            {
+                var no = document.getElementById("demo").value;
+                var rand = Math.floor(Math.random() * 11);
+                if(no == rand )
+                    alert("YOU WON\nNumber matched" + "\nOur number : " + rand + "\nyour number : " + no);
+                else
+                    alert("Number didn't matched" + "\nOur number : " + rand + "\nyour number : " + no);
+
+            }
+
+        </script>
+    </body>
+</html>
+
+
+
+
+</div>
