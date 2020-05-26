@@ -1,0 +1,55 @@
+<html>
+    <title>Multiplication table</title>
+    <head>
+       <center> <h1>Multiplication Tables</h1></center>
+    </head>
+    <body>
+        <div>
+            <center>
+            <div>
+               <label>Enter the no of column : </label>
+                <input type=text id=a value="">
+            </div>
+            <div>
+                <label>Enter the no. of rows :</label>
+                <input type=text id=b value="">
+            </div>
+            <button onclick='calculate()'>Calculate</button>
+            <div>
+                <p id=calc></p>
+            </div>
+            </center>
+            
+
+        <script type="text/javascript">
+                   
+            
+            function calculate()
+            {  
+                var x=document.getElementById("a").value;
+                var y=document.getElementById("b").value;  
+                createTable(x, y);
+                function createTable(x, y)
+                {
+                    var j=1;
+                    var output = "<table border='1' width='500' cellspacing='0'cellpadding='5'>";
+                    for(var i=1;i<=y;i++)
+                    {
+                        output = output + "<tr>";
+                        for(j=1;j<=x;j++)
+                        {
+                            output = output + "<td>" + i*j + "</td>";
+                        }
+                        
+                        output = output + "</tr>";
+                
+                    }
+                    output = output + "</table>";
+                    document.getElementById("calc").innerHTML = output;
+                }
+            } 
+        </script>
+
+        </div>
+    </body>
+</html>
