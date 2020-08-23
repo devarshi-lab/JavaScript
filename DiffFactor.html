@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- 
+Accept number from user and return difference between largest factor and
+smallest factor of that number.
+In this question you have to write the logic which should not be dependent on
+other function.
+(Smallest factor should not be 1 and largest factor should not be that number
+itself)
+Input : 18
+Output : 7 (9-2)
+Input : 51
+Output : 14 (17-3)
+Input : 7
+Output : 0 (0 - 0)
+Input : 4
+Output : 0 (2 - 2) 
+-->
+<html>
+<head>
+	<title>Difference Between Largest and Smallest factor</title>
+</head>
+<body>
+
+	<label>Enter the number : </label>
+	<input type="text" name="value" id="number"><br>
+	<input type="submit" value="Get Answer" onclick="DiffFactor()">
+
+	<p id="answer"></p>
+
+	<script type="text/javascript">
+		function DiffFactor()
+		{
+			var iNumber = document.getElementById("number").value;
+			var arr = new Array();
+			var i=0,j=0;
+			for(i = 2;i<=iNumber/2;i++)
+			{
+				if(iNumber % i == 0)
+				{
+					arr[j] = i;
+					j++;
+				}
+			}
+
+			var length=arr.length;
+			var ans = arr[length-1]-arr[0];
+			document.getElementById("answer").innerHTML = "Difference between largest and smallest factor is : " +ans;
+		}
+	</script>
+
+</body>
+</html>
