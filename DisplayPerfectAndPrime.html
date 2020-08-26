@@ -1,0 +1,65 @@
+<!--
+. Accept range from user and display prime & perfect numbers from that range.
+Input : 5 30
+Output : 5 is prime number
+ 6 is perfect number
+ 7 is prime number
+ 11 is prime number
+ 13 is prime number
+ 17 is prime number
+ 19 is prime number
+ 23 is prime number
+ 28 is perfect number
+ 29 is prime number
+ -->
+
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>Displaying Perfect And Prime Number</title>
+ </head>
+ <body>
+ 	<label>Enter the Starting : </label>
+ 	<input type="text" id="Start">
+
+ 	<label>Enter the Ending : </label>
+ 	<input type="text" id="Stop">
+
+ 	<input type="submit" value="Check" onclick="DisplayPerfectPrime()">
+
+ 	<script type="text/javascript">
+ 		function DisplayPerfectPrime()
+ 		{
+ 			var iStart = parseInt(document.getElementById("Start").value);
+ 			var iStop = parseInt(document.getElementById("Stop").value);
+ 			var iSum = 0;
+
+ 			if(iStop==0 || iStart>=iStop)
+ 			{
+ 				alert("Invalid Range.\nEnter valid Range\n");
+ 			}
+
+ 			for(var i = iStart;i<=iStop;i++)
+ 			{
+ 				iSum = 0;
+ 				for(var j=1;j<i;j++)
+ 				{
+ 					if(i % j == 0)
+ 					{
+ 						iSum += j;
+ 					}
+ 				}
+ 				if(iSum == i)
+ 				{
+ 					document.write(i+" is Perfect Number.<br>");
+ 				}
+ 				if(iSum == 1)
+ 				{
+ 					document.write(i+" is Prime Number.<br>");
+ 				}
+ 			}
+ 		}
+	</script>
+ 
+</body>
+</html>
