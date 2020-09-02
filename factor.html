@@ -1,0 +1,79 @@
+<html>
+<head>
+	<title>Factor</title>
+	
+</head>
+
+<body>
+	
+	Enter the Number : <input type="text" name="factor" id="factor">
+	<input type="submit" value="Get Factor" onclick="factor()">
+
+	<br>
+	Enter the Number to check palindrome : <input type="text" name="palindrome" id="palindrome">
+
+	<input type="submit" value="Check Palindrome">
+
+	
+	<p id="demo"> </p>
+	
+	<script>
+		
+		var ivalue = document.getElementById("palindrome").value;
+		var ret=palindrome(ivalue);
+		
+		if(ret == true)
+		{
+			document.getElementById("demo").innerHTML = "It is palindrome";
+		}
+		else
+		{
+			document.getElementById("demo").innerHTML = "It is not palindrome";
+		}		
+		
+	
+		function factor()
+		{
+			var i;
+			var fact = document.getElementById("factor").value;
+			
+			for(i=1;i<=fact;i++)
+			{
+				if(fact % i == 0)
+				{
+					document.writeln(i);
+				}
+			}
+			
+		}
+		
+		function palindrome(var number)
+		{
+			var original = number;
+			var digit = 0;
+			var reverse = 0;
+			
+			while(number != 0)
+			{
+				digit = number % 10;
+				reverse = (reverse*10)+digit;
+				number=number/10;
+			}
+			
+			if(reverse == original)
+			{
+				return true;
+			}
+			
+			return false;
+		}
+				
+				
+	</script>
+	
+</body>
+</html>
+	
+			
+	
+
